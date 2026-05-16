@@ -160,7 +160,7 @@ main {
 
 .home-text .subtitle {
   font-family: var(--font-nav);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--color-text-light);
   margin-bottom: 0.4rem;
   letter-spacing: 0.01em;
@@ -168,7 +168,7 @@ main {
 
 .home-text .research-interests {
   font-family: var(--font-nav);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
   letter-spacing: 0.01em;
