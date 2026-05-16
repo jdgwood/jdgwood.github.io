@@ -8,15 +8,17 @@
 :root {
   --color-bg: #fafaf8;
   --color-text: #2c2c2c;
-  --color-text-light: #5a5a5a;
+  --color-text-light: #636363;
   --color-accent: #1a1a1a;
-  --color-border: #e0ddd8;
-  --color-link: #3d3d3d;
-  --color-link-hover: #000;
+  --color-blue: #3b5998;
+  --color-border: #ddd9d2;
+  --color-link: #3b5998;
+  --color-link-hover: #2a4070;
+  --font-heading: 'Libre Baskerville', 'Georgia', serif;
   --font-body: 'Source Serif 4', 'Georgia', serif;
   --font-nav: 'DM Sans', 'Helvetica Neue', sans-serif;
-  --max-width: 920px;
-  --nav-height: 60px;
+  --max-width: 960px;
+  --nav-height: 64px;
 }
 
 html {
@@ -28,8 +30,9 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== Navigation ===== */
@@ -37,7 +40,9 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-bg);
+  background-color: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -52,9 +57,9 @@ nav .nav-inner {
 }
 
 nav .site-name {
-  font-family: var(--font-nav);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--color-accent);
   text-decoration: none;
   letter-spacing: -0.01em;
@@ -62,23 +67,30 @@ nav .site-name {
 
 nav .nav-links {
   display: flex;
-  gap: 1.8rem;
+  gap: 2rem;
   list-style: none;
 }
 
 nav .nav-links a {
   font-family: var(--font-nav);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 400;
   color: var(--color-text-light);
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: color 0.2s ease;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-nav .nav-links a:hover,
+nav .nav-links a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-blue);
+}
+
 nav .nav-links a.active {
   color: var(--color-accent);
+  border-bottom-color: var(--color-blue);
 }
 
 /* Mobile menu toggle */
@@ -103,42 +115,51 @@ nav .nav-links a.active {
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3.5rem 2rem 4rem;
+  padding: 3.5rem 2rem 5rem;
 }
 
 /* ===== Home / About Layout ===== */
 .home-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 3rem;
   align-items: start;
 }
 
 .home-photo img {
   width: 100%;
-  border-radius: 3px;
-  filter: grayscale(0%);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .home-text h1 {
-  font-family: var(--font-body);
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
   color: var(--color-accent);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
   letter-spacing: -0.02em;
 }
 
 .home-text .subtitle {
   font-family: var(--font-nav);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   letter-spacing: 0.01em;
 }
 
+.home-text .research-interests {
+  font-family: var(--font-nav);
+  font-size: 0.82rem;
+  color: var(--color-blue);
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
+
 .home-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.05rem;
   color: var(--color-text);
 }
 
@@ -148,48 +169,53 @@ main {
 
 .home-text a {
   color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 89, 152, 0.3);
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .home-text a:hover {
   color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
 }
 
 /* ===== Interior Pages ===== */
 .page-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .page-header h1 {
-  font-family: var(--font-body);
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
   color: var(--color-accent);
   letter-spacing: -0.02em;
 }
 
 /* Research / Publications */
 .section-group {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .section-group h2 {
   font-family: var(--font-nav);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--color-text-light);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--color-border);
 }
 
 .pub-item {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.pub-item p {
+  line-height: 1.65;
 }
 
 .pub-item .pub-title {
@@ -203,92 +229,104 @@ main {
 }
 
 .pub-item .pub-links {
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
 }
 
 .pub-item .pub-links a {
   font-family: var(--font-nav);
   font-size: 0.8rem;
-  color: var(--color-text-light);
+  color: var(--color-link);
   text-decoration: none;
   margin-right: 1rem;
-  transition: color 0.2s ease;
+  border-bottom: 1px solid rgba(59, 89, 152, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .pub-item .pub-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
 }
 
 /* Teaching */
 .teaching-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 .teaching-item .course-title {
   font-weight: 600;
+  color: var(--color-accent);
 }
 
 .teaching-item .course-detail {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
-}
-
-/* Contact */
-.contact-info p {
-  margin-bottom: 0.8rem;
-}
-
-.contact-info a {
-  color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.2s ease;
-}
-
-.contact-info a:hover {
-  color: var(--color-link-hover);
 }
 
 /* Book page */
 .book-layout {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
   align-items: start;
 }
 
 .book-cover img {
   width: 100%;
-  border-radius: 2px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
 }
 
 .book-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.05rem;
 }
 
 .book-text a {
   color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 89, 152, 0.3);
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .book-text a:hover {
   color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
+}
+
+.book-text em {
+  color: var(--color-text-light);
+}
+
+/* CV page */
+.cv-download {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.65rem 1.6rem;
+  font-family: var(--font-nav);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--color-blue);
+  text-decoration: none;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-download:hover {
+  background-color: var(--color-link-hover);
+  box-shadow: 0 2px 8px rgba(59, 89, 152, 0.25);
 }
 
 /* ===== Footer ===== */
 footer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2rem;
   border-top: 1px solid var(--color-border);
   font-family: var(--font-nav);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--color-text-light);
+  letter-spacing: 0.01em;
 }
 
 /* ===== Responsive ===== */
@@ -307,11 +345,13 @@ footer {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: var(--color-bg);
+    background: rgba(250, 250, 248, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
     flex-direction: column;
-    padding: 1rem 2rem;
-    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    gap: 0.9rem;
   }
 
   nav .nav-links.open {
@@ -324,7 +364,7 @@ footer {
   }
 
   .home-photo {
-    max-width: 240px;
+    max-width: 260px;
   }
 
   .book-layout {
@@ -333,7 +373,7 @@ footer {
   }
 
   .book-cover {
-    max-width: 180px;
+    max-width: 200px;
   }
 
   main {
