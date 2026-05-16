@@ -1,0 +1,342 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #fafaf8;
+  --color-text: #2c2c2c;
+  --color-text-light: #5a5a5a;
+  --color-accent: #1a1a1a;
+  --color-border: #e0ddd8;
+  --color-link: #3d3d3d;
+  --color-link-hover: #000;
+  --font-body: 'Source Serif 4', 'Georgia', serif;
+  --font-nav: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --max-width: 920px;
+  --nav-height: 60px;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Navigation ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav .nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .site-name {
+  font-family: var(--font-nav);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+nav .nav-links a {
+  font-family: var(--font-nav);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--color-accent);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--color-accent);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+/* ===== Home / About Layout ===== */
+.home-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.home-photo img {
+  width: 100%;
+  border-radius: 3px;
+  filter: grayscale(0%);
+}
+
+.home-text h1 {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.02em;
+}
+
+.home-text .subtitle {
+  font-family: var(--font-nav);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.home-text p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.home-text p:last-child {
+  margin-bottom: 0;
+}
+
+.home-text a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.home-text a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ===== Interior Pages ===== */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+/* Research / Publications */
+.section-group {
+  margin-bottom: 2.5rem;
+}
+
+.section-group h2 {
+  font-family: var(--font-nav);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pub-item {
+  margin-bottom: 1.3rem;
+}
+
+.pub-item .pub-title {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.pub-item .pub-venue {
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+.pub-item .pub-links {
+  margin-top: 0.3rem;
+}
+
+.pub-item .pub-links a {
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s ease;
+}
+
+.pub-item .pub-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Teaching */
+.teaching-item {
+  margin-bottom: 1rem;
+}
+
+.teaching-item .course-title {
+  font-weight: 600;
+}
+
+.teaching-item .course-detail {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Contact */
+.contact-info p {
+  margin-bottom: 0.8rem;
+}
+
+.contact-info a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Book page */
+.book-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.book-cover img {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.book-text p {
+  margin-bottom: 1rem;
+}
+
+.book-text a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.book-text a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ===== Footer ===== */
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  html {
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 0.8rem;
+  }
+
+  nav .nav-links.open {
+    display: flex;
+  }
+
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-photo {
+    max-width: 240px;
+  }
+
+  .book-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .book-cover {
+    max-width: 180px;
+  }
+
+  main {
+    padding: 2rem 1.2rem 3rem;
+  }
+}

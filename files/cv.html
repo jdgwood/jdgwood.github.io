@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV – James Wood, University of Cambridge">
+  <title>CV – James Wood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">James Wood</a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>CV</h1>
+    </div>
+
+    <p>A PDF copy of my full CV is available for download below.</p>
+
+    <p style="margin-top: 1.5rem;">
+      <a href="cv.pdf" style="font-family: var(--font-nav); font-size: 0.9rem; display: inline-block; padding: 0.6rem 1.4rem; border: 1px solid var(--color-accent); color: var(--color-accent); text-decoration: none; letter-spacing: 0.02em; transition: all 0.2s ease;"
+         onmouseover="this.style.backgroundColor='var(--color-accent)'; this.style.color='var(--color-bg)'"
+         onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-accent)'">
+        Download CV (PDF)
+      </a>
+    </p>
+
+  </main>
+
+  <footer>
+    &copy; 2026 James Wood
+  </footer>
+
+</body>
+</html>
