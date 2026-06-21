@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="James D. G. Wood – Associate Teaching Professor in Political Economy, University of Cambridge. Research on innovation policy, housing, and comparative political economy.">
   <title>James D. G. Wood – Political Economy, University of Cambridge</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script>document.documentElement.classList.add('has-js')</script>
 </head>
 <body>
 
-  <nav>
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="site-name">James D. G. Wood</a>
+      <a href="index.html" class="nav-name">James D. G. Wood<span class="dot">.</span></a>
       <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -28,32 +26,67 @@
     </div>
   </nav>
 
-  <main>
-    <div class="home-layout">
-      <div class="home-photo">
-        <img src="JW.jpg" alt="James D. G. Wood">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-main">
+        <div class="kicker">Political Economy · University of Cambridge</div>
+        <h1 class="hero-name">James D. G.<br>Wood</h1>
+        <p class="hero-role">Associate Teaching Professor in Political Economy, and Staff Fellow in Politics at Trinity Hall.</p>
       </div>
-      <div class="home-text">
-        <h1>James D. G. Wood</h1>
-        <p class="subtitle">Associate Teaching Professor in Political Economy · University of Cambridge</p>
-        <p class="research-interests">Innovation Policy · Housing · Comparative Political Economy · Macroeconomic Governance</p>
-
-        <p>I am an Associate Teaching Professor in the Department of Politics and International Studies at the University of Cambridge and a Staff Fellow in Politics at Trinity Hall, where I serve as Director of Studies for Human, Social, and Political Sciences.</p>
-
-        <p>My research examines the comparative political economy of the United States and the United Kingdom, with a focus on innovation policy, housing markets, household debt, and macroeconomic governance. My book, <a href="book.html"><em>States of Innovation: Driving the American Economy in the 21st Century</em></a> (Bristol University Press, 2026), develops the Polycentric Innovation State framework to reconceptualise the role of the state in American economic development.</p>
-
-        <p>My work has appeared in <em>Politics &amp; Society</em>, <em>New Political Economy</em>, the <em>Review of International Political Economy</em>, and the <em>Cambridge Journal of Regions, Economy and Society</em>, where I also serve as Associate Editor.</p>
-
-        <p>Before entering academia, I spent nearly a decade in the US mortgage industry, an experience that informs my research on housing finance and financial governance.</p>
-
-        <p>You can find my <a href="cv.html">CV here</a>.</p>
+      <div class="hero-portrait">
+        <span class="ph">JW<small>Photo</small></span>
+        <img src="JW.jpg" alt="James D. G. Wood" onerror="this.style.display='none'">
       </div>
     </div>
+  </header>
+
+  <main>
+    <section class="band" data-reveal>
+      <div class="band-inner two-col">
+        <div class="col-label"><span class="idx">01</span><span>About</span></div>
+        <div>
+          <div class="prose">
+            <p>I am an Associate Teaching Professor in the Department of Politics and International Studies at the University of Cambridge and a Staff Fellow in Politics at Trinity Hall, where I serve as Director of Studies for Human, Social, and Political Sciences.</p>
+
+            <p>My research examines the comparative political economy of the United States and the United Kingdom, with a focus on innovation policy, housing markets, household debt, and macroeconomic governance. My book, <a href="book.html"><em>States of Innovation: Driving the American Economy in the 21st Century</em></a> (Bristol University Press, 2026), develops the Polycentric Innovation State framework to reconceptualise the role of the state in American economic development.</p>
+
+            <p>My work has appeared in <em>Politics &amp; Society</em>, <em>New Political Economy</em>, the <em>Review of International Political Economy</em>, and the <em>Cambridge Journal of Regions, Economy and Society</em>, where I also serve as Associate Editor.</p>
+
+            <p>Before entering academia, I spent nearly a decade in the US mortgage industry, an experience that informs my research on housing finance and financial governance. You can find my <a href="cv.html">CV here</a>.</p>
+          </div>
+
+          <p class="interests-label">Research Interests</p>
+          <ul class="interests">
+            <li>Innovation Policy</li>
+            <li>Housing</li>
+            <li>Comparative Political Economy</li>
+            <li>Macroeconomic Governance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2026 James Wood
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="f-brand">
+        <div class="f-name">James D. G. Wood<span class="dot">.</span></div>
+        <p class="f-tag">Political Economy · University of Cambridge</p>
+      </div>
+      <nav class="f-nav">
+        <a href="index.html">About</a>
+        <a href="journal-articles.html">Journal Articles</a>
+        <a href="book.html">Book</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 James D. G. Wood</span>
+      <span>Cambridge, United Kingdom</span>
+    </div>
   </footer>
 
+  <script src="reveal.js" defer></script>
 </body>
 </html>

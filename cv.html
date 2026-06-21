@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CV – James D. G. Wood, University of Cambridge">
   <title>CV – James D. G. Wood</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script>document.documentElement.classList.add('has-js')</script>
 </head>
 <body>
 
-  <nav>
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="site-name">James D. G. Wood</a>
+      <a href="index.html" class="nav-name">James D. G. Wood<span class="dot">.</span></a>
       <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -29,19 +27,47 @@
   </nav>
 
   <main>
-    <div class="page-header">
-      <h1>CV</h1>
-    </div>
+    <section class="page-head">
+      <div class="wrap">
+        <div class="kicker">Curriculum Vitae · 05</div>
+        <h1 class="page-title">CV</h1>
+        <p class="page-desc">A complete record of my appointments, publications, teaching, and academic service.</p>
+      </div>
+    </section>
 
-    <p>A PDF copy of my full CV is available for download below.</p>
-
-    <a href="cv.pdf" class="cv-download">Download CV (PDF)</a>
-
+    <section class="band">
+      <div class="band-inner">
+        <div class="cv-card" data-reveal>
+          <div>
+            <h2>Full curriculum vitae</h2>
+            <p>Download a PDF copy of my complete CV, including appointments, publications, grants, teaching, and service.</p>
+          </div>
+          <a href="cv.pdf" class="cv-download" download>Download CV (PDF) ↓</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2026 James Wood
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="f-brand">
+        <div class="f-name">James D. G. Wood<span class="dot">.</span></div>
+        <p class="f-tag">Political Economy · University of Cambridge</p>
+      </div>
+      <nav class="f-nav">
+        <a href="index.html">About</a>
+        <a href="journal-articles.html">Journal Articles</a>
+        <a href="book.html">Book</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 James D. G. Wood</span>
+      <span>Cambridge, United Kingdom</span>
+    </div>
   </footer>
 
+  <script src="reveal.js" defer></script>
 </body>
 </html>

@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="States of Innovation – James D. G. Wood">
+  <meta name="description" content="States of Innovation: Driving the American Economy in the 21st Century – James D. G. Wood, Bristol University Press, 2026.">
   <title>Book – James D. G. Wood</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script>document.documentElement.classList.add('has-js')</script>
 </head>
 <body>
 
-  <nav>
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="site-name">James D. G. Wood</a>
+      <a href="index.html" class="nav-name">James D. G. Wood<span class="dot">.</span></a>
       <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -29,34 +27,67 @@
   </nav>
 
   <main>
-    <div class="page-header">
-      <h1>Book</h1>
-    </div>
-
-    <div class="book-layout">
-      <div class="book-cover">
-        <img src="book-cover.jpg" alt="States of Innovation: Driving the American Economy in the 21st Century book cover">
+    <section class="page-head">
+      <div class="wrap">
+        <div class="kicker">Book · 03</div>
+        <h1 class="page-title">States of Innovation</h1>
+        <p class="page-desc">Driving the American Economy in the 21st Century — Bristol University Press, 2026.</p>
       </div>
-      <div class="book-text">
-        <p><strong><em>States of Innovation: Driving the American Economy in the 21st Century</em></strong><br>
-        Bristol University Press, 2026.</p>
+    </section>
 
-        <p>This book unveils the forces behind the dynamic knowledge economy that drove America's 21st century economic success. Challenging the notion of the US as a singular market-driven economy, the book introduces the concept of the 'Polycentric Innovation State' to explain the critical role federal and state governments play in shaping innovation-led growth. Through detailed comparative analysis of four states, the book demonstrates how regional authorities pursue distinct yet overlapping strategies to foster high-value industries. Essential reading for scholars of comparative political economy and American governance, this book offers fresh insights into the evolving landscape of American capitalism and state-market relations.</p>
+    <section class="band">
+      <div class="band-inner">
+        <div class="book-grid" data-reveal>
+          <div class="book-cover">
+            <img src="book-cover.jpg" alt="States of Innovation: Driving the American Economy in the 21st Century — book cover">
+            <p class="book-pub">Bristol University Press · 2026</p>
+          </div>
+          <div>
+            <div class="book-body">
+              <p>This book unveils the forces behind the dynamic knowledge economy that drove America's 21st century economic success. Challenging the notion of the US as a singular market-driven economy, it introduces the concept of the <em>Polycentric Innovation State</em> to explain the critical role federal and state governments play in shaping innovation-led growth.</p>
 
-        <p><strong>Endorsements</strong></p>
+              <p>Through detailed comparative analysis of four states, the book demonstrates how regional authorities pursue distinct yet overlapping strategies to foster high-value industries. Essential reading for scholars of comparative political economy and American governance, it offers fresh insights into the evolving landscape of American capitalism and state–market relations.</p>
+            </div>
 
-        <p><em>"A powerful, original account of the US innovation ecosystem, compellingly emphasising state interventions. Iconoclastic in its implications and highly persuasive."</em><br>
-        — Colin Hay, Sciences Po</p>
+            <a class="book-cta" href="https://bristoluniversitypress.co.uk/" target="_blank" rel="noopener">View at Bristol University Press →</a>
 
-        <p><em>"A compelling multi-scalar analysis that challenges conventional accounts by revealing the heterogenous and polycentric nature of the US innovation ecosystem."</em><br>
-        — Elvira Uyarra, University of Manchester</p>
+            <p class="endorse-label">Endorsements</p>
+
+            <blockquote class="endorse" data-reveal>
+              <p>"A powerful, original account of the US innovation ecosystem, compellingly emphasising state interventions. Iconoclastic in its implications and highly persuasive."</p>
+              <cite>— Colin Hay, Sciences Po</cite>
+            </blockquote>
+
+            <blockquote class="endorse" data-reveal>
+              <p>"A compelling multi-scalar analysis that challenges conventional accounts by revealing the heterogenous and polycentric nature of the US innovation ecosystem."</p>
+              <cite>— Elvira Uyarra, University of Manchester</cite>
+            </blockquote>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2026 James Wood
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="f-brand">
+        <div class="f-name">James D. G. Wood<span class="dot">.</span></div>
+        <p class="f-tag">Political Economy · University of Cambridge</p>
+      </div>
+      <nav class="f-nav">
+        <a href="index.html">About</a>
+        <a href="journal-articles.html">Journal Articles</a>
+        <a href="book.html">Book</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 James D. G. Wood</span>
+      <span>Cambridge, United Kingdom</span>
+    </div>
   </footer>
 
+  <script src="reveal.js" defer></script>
 </body>
 </html>
