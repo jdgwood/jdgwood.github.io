@@ -96,9 +96,12 @@ body {
 }
 .hero-name .dot { color:var(--accent); }
 .hero-role {
-  font-family:var(--serif); font-size:1.5rem; line-height:1.45;
-  color:var(--text-mid); max-width:24ch; font-weight:400;
+  font-family:var(--serif); font-size:1.4rem; line-height:1.4;
+  color:var(--text-mid); max-width:48ch; font-weight:400;
 }
+.hero-role span { display:block; }
+.hero-role .nb { display:inline; white-space:nowrap; }
+.hero-role span + span { margin-top:.7rem; }
 .hero-portrait {
   width:200px; height:248px; border-radius:6px; overflow:hidden;
   background:linear-gradient(155deg,#f3a96f,var(--accent) 72%,#d8501e);
