@@ -226,6 +226,7 @@ body {
 /* ===================== Book ===================== */
 .book-grid { display:grid; grid-template-columns:320px 1fr; gap:72px; align-items:start; }
 .book-cover { position:sticky; top:calc(var(--nav-h) + 34px); }
+.book-cover a { display:block; border-radius:4px; }
 .book-cover img {
   width:100%; border-radius:4px; display:block;
   box-shadow:0 26px 60px -24px rgba(28,26,23,.42);
